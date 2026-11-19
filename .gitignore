@@ -1,0 +1,27 @@
+# Secrets & environment
+.env
+.env.*
+*.pem
+*.key
+
+# OS & editor artifacts
+.DS_Store
+Thumbs.db
+*.bak
+
+# Python & Node caches / future app dependencies
+__pycache__/
+*.pyc
+.venv/
+venv/
+node_modules/
+app/node_modules/
+app/.next/
+app/dist/
+app/build/
+
+# Graphify ephemeral/machine-local cache & markers (keep graph.json, GRAPH_REPORT.md, graph.html)
+graphify-out/cache/
+graphify-out/.graphify_*
+graphify-out/.pending*
+graphify-out/manifest.json
