@@ -77,7 +77,17 @@ Primary access method: **Graphify CLI** (`graphify`, verified `v0.9.111`), docum
 | `ISSUES.md` | Review tickets (`ISS-NNN`), severity, owner routing, revision counts |
 | `CHANGELOG.md` | Major system and project deliverable history |
 | `agents/` | Detailed specifications for `orchestrator.md` and `01`–`13` |
-| `workflows/` | Portable command runbooks: `start-discovery`, `resume`, `review`, `finalize` |
+| `workflows/` | Portable command runbooks: `start-discovery`, `resume`, `review`, `finalize`, `developer-requests` |
 | `artifacts/` | Stage deliverables organized by domain + `_TEMPLATE.md` |
+| `handoff/` | Cross-team package export (`developer-packages/`) & request/response queue (`developer-requests/`) with `E:\Codes\WebDeveloperTeam` |
 | `docs/GRAPHIFY.md` | Graphify setup, verified commands, exclusions, refresh & fallback guide |
 | `.agents/` & `.claude/` / `CLAUDE.md` | Thin Antigravity and Claude Code adapters |
+
+---
+
+## 6. Development Team Integration Boundary (`E:\Codes\WebDeveloperTeam`)
+
+- **Partner repository:** `E:\Codes\WebDeveloperTeam` (independent codebase, task board, and Graphify graph).
+- **Ownership separation:** Research Team owns product research, `EVIDENCE_LEDGER.md`, `REQ-NNN`, business rules, personas, `UX-NNN`, research-based `ARC-NNN`, product `DEC-NNN`, and limitations. Development Team owns `app/` code, implementation architecture, DB/API/frontend/backend code, automated tests, and deployment config.
+- **No cross-repo silent edits:** Never modify Development Team implementation files; deliver versioned ZIPs only to `E:\Codes\WebDeveloperTeam\ResearchTeamFinalResults\incoming\` and process incoming clarification tickets via [handoff/README.md](handoff/README.md) and [workflows/developer-requests.md](workflows/developer-requests.md).
+- **Authorization boundary:** Delivering a handoff package (`Package A` / `ART-011`) does **not** authorize `app/` implementation coding until the human owner explicitly approves it.

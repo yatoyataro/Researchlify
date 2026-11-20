@@ -13,8 +13,9 @@ A repository-canonical, cross-IDE (**Antigravity** and **Claude Code**) multi-ag
 - **Root canonical state & governance:**
   `AGENTS.md`, `TEAM.md`, `WORKFLOW.md`, `STATE.md`, `DECISIONS.md`, `ARTIFACT_INDEX.md`, `SKILL_REGISTRY.md`, `EVIDENCE_LEDGER.md`, `ISSUES.md`, `CHANGELOG.md`
 - **Role specifications:** `agents/orchestrator.md` and `agents/01-*.md` through `agents/13-*.md`
-- **Portable workflows:** `workflows/` (`start-discovery.md`, `resume.md`, `review.md`, `finalize.md`)
+- **Portable workflows:** `workflows/` (`start-discovery.md`, `resume.md`, `review.md`, `finalize.md`, `developer-requests.md`)
 - **Deliverable workspace:** `artifacts/` (`research`, `problem-analysis`, `product`, `requirements`, `ux`, `architecture`, `reviews`, `client-package`, plus `_TEMPLATE.md`)
+- **Cross-team handoff & requests:** `handoff/` (`README.md`, `HANDOFF_REGISTRY.md`, `developer-packages/`, `developer-requests/`) for integration with `E:\Codes\WebDeveloperTeam`
 - **IDE thin adapters:**
   - Antigravity: `.agents/skills/`, `.agents/workflows/`, `.agents/rules/`
   - Claude Code: `CLAUDE.md`, `.claude/commands/`, `.claude/skills/`, `.claude/settings.json`, `.claude/CLAUDE.md`

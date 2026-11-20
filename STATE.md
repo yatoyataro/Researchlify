@@ -10,11 +10,11 @@
 |---|---|
 | **Project Name** | *(Not started — awaiting project goal)* |
 | **Workflow Status** | `IDLE` (`READY_FOR_INTAKE`) |
-| **Current Stage** | `None` (System setup complete; waiting for user to invoke `start-discovery` with a project goal) |
+| **Current Stage** | `None` (PRB-005 archived; waiting for user to invoke `start-discovery` with a new project goal) |
 | **Active / Next Agent** | `Agent 00 (Orchestrator)` upon user project intake |
-| **Last Completed Gate** | `System Bootstrap & Validation` |
-| **Active IDE / Last Writer** | `Antigravity` (initial setup) |
-| **Last Updated** | `2026-11-19` |
+| **Last Completed Gate** | `PRB-005 Archived (Deployed)` + `System Bootstrap & Validation` |
+| **Active IDE / Last Writer** | `Antigravity` |
+| **Last Updated** | `2026-11-20` |
 | **Concurrent Lock Note** | Serialize writes to canonical files; do not run parallel discovery sessions against this state file. |
 
 ---
@@ -43,7 +43,15 @@
 
 ## Open Blockers & Pending Human Approvals
 
-- **Project Goal Needed:** System is idle until the user supplies a target domain/project goal and starts discovery.
+- **Project Goal Needed:** System is idle (`READY_FOR_INTAKE`) until the user supplies a new target domain/project goal and starts discovery.
+
+---
+
+## Archived Projects (History Preserved)
+
+| Project ID | Name | Status | Archive Location | Handoff & Deployment |
+|---|---|---|---|---|
+| `PRB-005` | Zero-Cost Social Casual Learning (`BrainPlay`) | `completed` -> `deployed` (`2026-11-20`) | [artifacts/archive/PRB-005/](artifacts/archive/PRB-005/product/ART-011-package-a-technical-handoff.md) (`ART-001`..`ART-018`) | `PKG-PRB-005-v1.0` ([HANDOFF_REGISTRY.md](handoff/HANDOFF_REGISTRY.md)) · Live: https://prb005-brainplay.pages.dev · Repo: https://github.com/yatoyataro/brainplay |
 
 ---
 
@@ -53,11 +61,11 @@
 |---|---|
 | **CLI Version** | `graphify 0.9.111` (verified) |
 | **Graph Path** | `graphify-out/graph.json` |
-| **Freshness** | `Current` — built & verified `2026-11-19` via `graphify update .` |
-| **Mode** | Structural AST + Markdown extraction (`graphify update .`); semantic LLM extraction requires `GEMINI_API_KEY`/`GOOGLE_API_KEY` or assistant subagent pass |
+| **Freshness** | `Current` — updated `2026-11-20` via `graphify update .` (873 nodes, 865 edges, 83 communities) |
+| **Mode** | Structural AST + Markdown extraction (`graphify update .`) |
 
 ---
 
 ## Next Action
 
-Wait for the user to provide a real project goal and run `start-discovery`.
+Wait for the user to provide a new project goal and run `/start-discovery` (continuing `SRC-031+`, `FND-017+`, `DEC-012+`, `ISS-003+` or scoping new artifacts cleanly without overwriting `PRB-005` history).

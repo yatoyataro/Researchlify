@@ -84,3 +84,4 @@ Every specialist invocation by the Orchestrator must include:
 | Missing/unverified skill or registry/approval gap | Agent 12 |
 | Unclear client prose, jargon, tone mismatch, broken claim traceability | Agent 13 |
 | Policy, privacy, permissions, budget/tradeoff decision, conflicting stakeholders | **Human** |
+| Incoming Development Team clarification / research request (`handoff/developer-requests/inbox/`) | Orchestrator (`Agent 00`) routes per [workflows/developer-requests.md](workflows/developer-requests.md) to owning specialist (`01`–`13`) |
